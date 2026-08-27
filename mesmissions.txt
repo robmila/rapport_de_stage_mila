@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mes missions | Arquitectonica Europe</title>
+
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="missions.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav>
+
+    <a href="accueil.html">Accueil</a>
+    <a href="mes-missions.html">Missions</a>
+    <a href="moodboard.html">Moodboard</a>
+    <a href="glossaire.html">Glossaire</a>
+    <a href="calculatrice.html">Calculatrice</a>
+
+</nav>
+
+
+<header class="hero">
+
+    <span class="small-title">MISSIONS</span>
+
+    <h1>Mon stage chez Arquitectonica Europe</h1>
+
+    <p>
+        Au cours de mon stage chez Arquitectonica Europe, j'ai participé à la structuration d'une base documentaire destinée à centraliser les connaissances de l'agence. Cette documentation rassemble les expertises, les références de projets, les méthodes de conception et les informations institutionnelles afin d'alimenter le site internet, les supports de communication et les réponses aux appels d'offres.
+    </p>
+
+</header>
+
+
+
+<section class="intro">
+
+    <div class="intro-title">
+
+        <h1>Mes missions principales</h1>
+
+    </div>
+
+    <div class="recherche">
+
+        <h2>Recherche et structuration documentaire</h2>
+
+        <ul>
+
+            <li>Recherche d'informations techniques sur les domaines d'expertise.</li>
+
+            <li>Synthèse des méthodes de conception utilisées par Arquitectonica.</li>
+
+            <li>Organisation des contenus dans une base documentaire homogène.</li>
+
+            <li>Identification de références de projets et d'illustrations.</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+<section class="projet">
+
+    <h1>Suivi des projets</h1>
+
+    <p>
+        Pendant mon stage, j'ai participé au suivi documentaire de plusieurs projets en cours afin de mieux comprendre leur développement et les méthodes de travail d'Arquitectonica Europe.
+    </p>
+
+    <div class="project-card">
+
+        <h2>EOS — France</h2>
+
+        <ul>
+
+            <li>Suivi de l'évolution du projet.</li>
+
+            <li>Observation des choix architecturaux liés à la rénovation.</li>
+
+            <li>Analyse des solutions retenues pour améliorer les espaces de travail.</li>
+
+            <li>Compréhension du processus de conception au sein d'Arquitectonica Europe.</li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="project-card">
+
+        <h2>Exaltis — France</h2>
+
+        <ul>
+
+            <li>Observation du développement du projet de rénovation.</li>
+
+            <li>Analyse des solutions architecturales mises en œuvre.</li>
+
+            <li>Compréhension des enjeux liés aux espaces de travail.</li>
+
+            <li>Découverte des différentes étapes de conception d'un projet tertiaire.</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+<section class="expertises">
+
+    <div class="intro-title">
+
+        <h1>Les expertises</h1>
+
+        <p>
+            Chaque domaine d'expertise est présenté au travers d'une fiche détaillée comprenant une définition, la vision d'Arquitectonica, la méthodologie, les connaissances techniques et des projets de référence.
+        </p>
+
+    </div>
+
+    <a href="mes-expertises.html" class="btn">
+
+        Explorer toutes les expertises
+
+    </a>
+
+</section>
+
+
+
+<section class="documentation">
+
+    <div class="intro-title">
+
+        <h1>Base documentaire</h1>
+
+    </div>
+
+    <p>
+        La documentation réalisée durant le stage est organisée en plusieurs dossiers afin de faciliter la recherche d'informations et la production de contenus destinés au site internet, aux présentations corporate et aux réponses aux appels d'offres.
+    </p>
+
+    <ul>
+
+        <li>01 — Brand & Studio</li>
+
+        <li>02 — Expertises</li>
+
+        <li>03 — Projects</li>
+
+        <li>04 — Innovation</li>
+
+        <li>05 — Sustainability</li>
+
+        <li>06 — Visual Library</li>
+
+    </ul>
+
+</section>
+
+
+
+<footer>
+
+    <ul>
+
+        <li>LinkedIn</li>
+
+        <li>Contact</li>
+
+        <li>© 2026 Mila Robert</li>
+
+    </ul>
+
+</footer>
+
+</body>
+
+</html>

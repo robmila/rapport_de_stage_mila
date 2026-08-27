@@ -1,0 +1,1266 @@
+/*==============================================================*/
+/* RESET */
+/*==============================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    color:#222;
+
+    background:#ffffff;
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+section{
+
+    width:100%;
+
+}
+
+
+/*==============================================================*/
+/* NAVBAR */
+/*==============================================================*/
+
+nav{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:85px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:55px;
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(16px);
+
+    -webkit-backdrop-filter:blur(16px);
+
+    z-index:1000;
+
+    transition:.35s;
+
+    box-shadow:0 5px 25px rgba(0,0,0,.06);
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:#222;
+
+    font-size:15px;
+
+    letter-spacing:1px;
+
+    font-weight:500;
+
+    position:relative;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#9d8b66;
+
+    transition:.35s;
+
+}
+
+nav a:hover{
+
+    color:#9d8b66;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+
+/*==============================================================*/
+/* HERO */
+/*==============================================================*/
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    padding:0 8% 90px;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+
+    rgba(0,0,0,.08),
+
+    rgba(0,0,0,.48)
+
+    ),
+
+    url("image/urban-design.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+
+    circle at 70% 30%,
+
+    rgba(255,255,255,.08),
+
+    transparent 45%
+
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+    max-width:760px;
+
+    color:white;
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.small-title{
+
+    display:inline-block;
+
+    margin-bottom:20px;
+
+    text-transform:uppercase;
+
+    letter-spacing:8px;
+
+    font-size:13px;
+
+    font-weight:500;
+
+    opacity:.95;
+
+}
+
+
+/*==============================================================*/
+/* TITRE */
+/*==============================================================*/
+
+.hero h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:125px;
+
+    font-weight:300;
+
+    line-height:.95;
+
+    margin-bottom:30px;
+
+    letter-spacing:-5px;
+
+}
+
+.hero p{
+
+    max-width:620px;
+
+    font-size:24px;
+
+    line-height:1.8;
+
+    margin-bottom:45px;
+
+    font-weight:300;
+
+}
+
+
+/*==============================================================*/
+/* BOUTON */
+/*==============================================================*/
+
+.hero-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 40px;
+
+    border-radius:45px;
+
+    background:white;
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.hero-button:hover{
+
+    background:#9d8b66;
+
+    color:white;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 25px 45px rgba(0,0,0,.25);
+
+}
+
+
+/*==============================================================*/
+/* ANIMATION */
+/*==============================================================*/
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(45px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+/*==============================================================*/
+/* INTRODUCTION */
+/*==============================================================*/
+
+.intro{
+
+    max-width:1500px;
+
+    margin:auto;
+
+    padding:140px 8%;
+
+    display:grid;
+
+    grid-template-columns:35% 65%;
+
+    gap:120px;
+
+    align-items:start;
+
+}
+
+.intro-title{
+
+    position:sticky;
+
+    top:140px;
+
+}
+
+.intro-title h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:80px;
+
+    font-weight:300;
+
+    line-height:1;
+
+    color:#222;
+
+}
+
+.intro-text{
+
+    max-width:750px;
+
+}
+
+.intro-text p{
+
+    font-size:21px;
+
+    color:#555;
+
+    line-height:2.1;
+
+    margin-bottom:50px;
+
+}
+
+
+/*==============================================================*/
+/* TAGS */
+/*==============================================================*/
+
+.tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+}
+
+.tags span{
+
+    background:#f2f2f2;
+
+    padding:14px 24px;
+
+    border-radius:40px;
+
+    font-size:15px;
+
+    color:#555;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.tags span:hover{
+
+    background:#222;
+
+    color:white;
+
+}
+
+
+/*==============================================================*/
+/* IMAGE + TEXTE */
+/*==============================================================*/
+
+.split{
+
+    max-width:1500px;
+
+    margin:auto;
+
+    padding:80px 8% 140px;
+
+    display:grid;
+
+    grid-template-columns:58% 42%;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.image{
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+}
+
+.image img{
+
+    width:100%;
+
+    height:720px;
+
+    object-fit:cover;
+
+    transition:.8s;
+
+}
+
+.image:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.content{
+
+    padding-left:20px;
+
+}
+
+.content h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:58px;
+
+    font-weight:300;
+
+    margin-bottom:35px;
+
+}
+
+.content p{
+
+    font-size:19px;
+
+    color:#666;
+
+    line-height:2;
+
+}
+
+
+/*==============================================================*/
+/* SECTIONS */
+/*==============================================================*/
+
+.section{
+
+    max-width:1500px;
+
+    margin:auto;
+
+    padding:120px 8%;
+
+}
+
+.section h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:60px;
+
+    font-weight:300;
+
+    margin-bottom:70px;
+
+}
+
+
+/*==============================================================*/
+/* METHODOLOGY */
+/*==============================================================*/
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.grid article{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:18px;
+
+    border:1px solid #ececec;
+
+    transition:.35s;
+
+}
+
+.grid article:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.08);
+
+}
+
+.grid h3{
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+    color:#222;
+
+}
+
+.grid ul{
+
+    padding-left:20px;
+
+}
+
+.grid li{
+
+    color:#666;
+
+    line-height:2;
+
+    margin-bottom:10px;
+
+}
+
+.grid p{
+
+    color:#666;
+
+    line-height:2;
+
+}
+
+
+/*==============================================================*/
+/* KEY QUESTIONS */
+/*==============================================================*/
+
+.questions{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.questions div{
+
+    padding:35px;
+
+    background:#fafafa;
+
+    border-left:4px solid #9d8b66;
+
+    transition:.35s;
+
+    line-height:1.9;
+
+    font-size:19px;
+
+}
+
+.questions div:hover{
+
+    transform:translateX(8px);
+
+    background:#222;
+
+    color:white;
+
+}
+/*==============================================================*/
+/* RELATED PROJECTS */
+/*==============================================================*/
+
+.projects{
+
+    background:#f8f8f8;
+
+    padding:160px 8%;
+
+}
+
+.projects h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:72px;
+
+    font-weight:300;
+
+    text-align:center;
+
+    margin-bottom:90px;
+
+    color:#222;
+
+}
+
+.projects-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(430px,1fr));
+
+    gap:55px;
+
+}
+
+
+/*==============================================================*/
+/* PROJECT CARD */
+/*==============================================================*/
+
+.project{
+
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    transition:.45s;
+
+    border:1px solid #ececec;
+
+}
+
+.project:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 35px 70px rgba(0,0,0,.12);
+
+}
+
+.project img{
+
+    width:100%;
+
+    height:340px;
+
+    object-fit:cover;
+
+    transition:.7s;
+
+}
+
+.project:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+/*==============================================================*/
+/* PROJECT CONTENT */
+/*==============================================================*/
+
+.project div{
+
+    padding:38px;
+
+}
+
+.project h3{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:40px;
+
+    font-weight:400;
+
+    color:#222;
+
+    margin-bottom:20px;
+
+}
+
+.project p{
+
+    color:#666;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+    font-size:17px;
+
+}
+
+
+/*==============================================================*/
+/* PROJECT LINK */
+/*==============================================================*/
+
+.project a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    color:#222;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    transition:.35s;
+
+}
+
+.project a::after{
+
+    content:"→";
+
+    transition:.35s;
+
+}
+
+.project:hover a{
+
+    color:#9d8b66;
+
+}
+
+.project:hover a::after{
+
+    transform:translateX(8px);
+
+}
+
+
+/*==============================================================*/
+/* IMAGE HOVER EFFECT */
+/*==============================================================*/
+
+.project::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+.project{
+
+    position:relative;
+
+}
+
+
+/*==============================================================*/
+/* PROJECT NUMBER */
+/*==============================================================*/
+
+.project h3::before{
+
+    content:"PROJECT";
+
+    display:block;
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:12px;
+
+    letter-spacing:5px;
+
+    color:#999;
+
+    margin-bottom:10px;
+
+}
+
+
+/*==============================================================*/
+/* SEPARATION */
+/*==============================================================*/
+
+.projects::before{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:2px;
+
+    background:#9d8b66;
+
+    margin:0 auto 50px auto;
+
+}
+
+
+/*==============================================================*/
+/* RESPONSIVE */
+/*==============================================================*/
+
+@media(max-width:1000px){
+
+.projects{
+
+padding:90px 30px;
+
+}
+
+.projects h2{
+
+font-size:50px;
+
+}
+
+.projects-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.project img{
+
+height:250px;
+
+}
+
+.project h3{
+
+font-size:32px;
+
+}
+
+}
+/*==============================================================*/
+/* FOOTER */
+/*==============================================================*/
+
+footer{
+
+    background:#111;
+
+    color:white;
+
+    padding:80px 8%;
+
+    text-align:center;
+
+}
+
+footer h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:50px;
+
+    font-weight:300;
+
+    margin-bottom:20px;
+
+}
+
+footer p{
+
+    color:#cfcfcf;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    margin-bottom:15px;
+
+}
+
+footer a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+footer a:hover{
+
+    color:#9d8b66;
+
+}
+
+
+/*==============================================================*/
+/* SCROLLBAR */
+/*==============================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f2f2f2;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#9d8b66;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#7e6f51;
+
+}
+
+
+/*==============================================================*/
+/* SELECTION */
+/*==============================================================*/
+
+::selection{
+
+    background:#9d8b66;
+
+    color:white;
+
+}
+
+
+/*==============================================================*/
+/* RESPONSIVE */
+/*==============================================================*/
+
+@media(max-width:1100px){
+
+.hero h1{
+
+font-size:90px;
+
+}
+
+.intro{
+
+grid-template-columns:1fr;
+
+gap:60px;
+
+}
+
+.intro-title{
+
+position:static;
+
+}
+
+.split{
+
+grid-template-columns:1fr;
+
+}
+
+.content{
+
+padding-left:0;
+
+}
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+.questions{
+
+grid-template-columns:1fr;
+
+}
+
+.projects-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+@media(max-width:768px){
+
+nav{
+
+gap:25px;
+
+height:75px;
+
+}
+
+nav a{
+
+font-size:13px;
+
+}
+
+.hero{
+
+padding:0 30px 70px;
+
+background-attachment:scroll;
+
+}
+
+.hero h1{
+
+font-size:62px;
+
+letter-spacing:-2px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.hero-button{
+
+padding:15px 30px;
+
+}
+
+.intro{
+
+padding:90px 30px;
+
+}
+
+.intro-title h2{
+
+font-size:55px;
+
+}
+
+.intro-text p{
+
+font-size:18px;
+
+}
+
+.split{
+
+padding:60px 30px 90px;
+
+}
+
+.image img{
+
+height:400px;
+
+}
+
+.content h2{
+
+font-size:45px;
+
+}
+
+.section{
+
+padding:90px 30px;
+
+}
+
+.section h2{
+
+font-size:48px;
+
+}
+
+.grid article{
+
+padding:30px;
+
+}
+
+.projects{
+
+padding:90px 30px;
+
+}
+
+.projects h2{
+
+font-size:50px;
+
+}
+
+.project h3{
+
+font-size:32px;
+
+}
+
+footer{
+
+padding:60px 30px;
+
+}
+
+footer h2{
+
+font-size:40px;
+
+}
+
+}
+
+
+@media(max-width:480px){
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.small-title{
+
+letter-spacing:4px;
+
+font-size:11px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.intro-title h2{
+
+font-size:42px;
+
+}
+
+.content h2{
+
+font-size:38px;
+
+}
+
+.section h2{
+
+font-size:40px;
+
+}
+
+.project img{
+
+height:220px;
+
+}
+
+.project div{
+
+padding:25px;
+
+}
+
+.project h3{
+
+font-size:28px;
+
+}
+
+footer h2{
+
+font-size:34px;
+
+}
+
+}

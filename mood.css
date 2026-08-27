@@ -1,0 +1,1496 @@
+/*==================================================
+                    RESET
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#faf9f7;
+
+    color:#222;
+
+    line-height:1.8;
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+section{
+
+    width:min(1300px,90%);
+
+    margin:auto;
+
+    padding:140px 0;
+
+}
+
+/*==================================================
+                    NAVBAR
+==================================================*/
+
+nav{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:45px;
+
+    padding:28px 0;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(16px);
+
+    -webkit-backdrop-filter:blur(16px);
+
+    z-index:999;
+
+    transition:.4s;
+
+    border-bottom:1px solid rgba(0,0,0,.05);
+
+}
+
+nav a{
+
+    color:#222;
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#222;
+
+    transition:.3s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+nav a:hover{
+
+    color:#000;
+
+}
+
+/*==================================================
+                    HERO
+==================================================*/
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:0 10%;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,.30),
+        rgba(0,0,0,.60)
+    ),
+
+    url("image/33.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+.small-title{
+
+    letter-spacing:8px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+    margin-bottom:25px;
+
+    opacity:.9;
+
+}
+
+.hero h1{
+
+    font-size:5.2rem;
+
+    font-weight:600;
+
+    line-height:1.1;
+
+    margin-bottom:30px;
+
+    max-width:950px;
+
+}
+
+.hero p{
+
+    max-width:850px;
+
+    color:rgba(255,255,255,.92);
+
+    font-size:1.15rem;
+
+    line-height:2;
+
+}
+
+/*==================================================
+                TITRES DES SECTIONS
+==================================================*/
+
+.intro-title{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+}
+
+.intro-title h1{
+
+    font-size:3.2rem;
+
+    font-weight:600;
+
+    color:#111;
+
+    margin-bottom:20px;
+
+}
+
+.intro-title p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    color:#666;
+
+    font-size:1.05rem;
+
+    line-height:2;
+
+}
+
+/*==================================================
+                ANIMATIONS
+==================================================*/
+
+.hero>*,
+.intro-title{
+
+    animation:fadeUp .9s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:1000px){
+
+.hero h1{
+
+font-size:3.8rem;
+
+}
+
+nav{
+
+gap:25px;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.hero{
+
+padding:0 8%;
+
+}
+
+.hero h1{
+
+font-size:2.8rem;
+
+}
+
+.hero p{
+
+font-size:1rem;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+gap:15px;
+
+padding:18px;
+
+}
+
+nav a{
+
+font-size:.9rem;
+
+}
+
+}2
+/*==================================================
+                PRESENTATION
+==================================================*/
+
+.presentation{
+
+    width:min(1250px,90%);
+    margin:auto;
+
+}
+
+.presentation-grid{
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.presentation-grid h2{
+
+    font-size:2.5rem;
+
+    margin-bottom:30px;
+
+    color:#111;
+
+}
+
+.presentation-grid p{
+
+    color:#666;
+
+    margin-bottom:25px;
+
+    line-height:2;
+
+}
+
+.presentation-grid img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+    transition:.5s;
+
+}
+
+.presentation-grid img:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+/*==================================================
+                OBJECTIFS
+==================================================*/
+
+.objectifs{
+
+    width:min(1300px,92%);
+    margin:auto;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:70px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:20px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 30px 70px rgba(0,0,0,.12);
+
+}
+
+.card h3{
+
+    font-size:1.6rem;
+
+    margin-bottom:20px;
+
+    color:#111;
+
+}
+
+.card p{
+
+    color:#666;
+
+    line-height:1.9;
+
+}
+
+
+/*==================================================
+                MOODBOARD
+==================================================*/
+
+.moodboard{
+
+    width:min(1350px,94%);
+    margin:auto;
+
+}
+
+.moodboard-grid{
+
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.moodboard-image{
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    box-shadow:0 30px 70px rgba(0,0,0,.12);
+
+}
+
+.moodboard-image img{
+
+    width:100%;
+
+    transition:.6s;
+
+}
+
+.moodboard-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+.moodboard-text h2{
+
+    font-size:2.3rem;
+
+    margin-bottom:30px;
+
+    color:#111;
+
+}
+
+.moodboard-text p{
+
+    color:#666;
+
+    line-height:2;
+
+    margin-bottom:25px;
+
+}
+
+
+/*==================================================
+                ANALYSE
+==================================================*/
+
+.analyse{
+
+    width:min(1300px,92%);
+    margin:auto;
+
+}
+
+
+/*==================================================
+                REFERENCES
+==================================================*/
+
+.references{
+
+    width:min(1300px,92%);
+    margin:auto;
+
+}
+
+.reference-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+.reference-item{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:18px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+.reference-item:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 30px 60px rgba(0,0,0,.10);
+
+}
+
+.reference-item h3{
+
+    font-size:1.5rem;
+
+    margin-bottom:20px;
+
+    color:#111;
+
+}
+
+.reference-item p{
+
+    color:#666;
+
+    line-height:1.9;
+
+}
+
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:1050px){
+
+.presentation-grid,
+.moodboard-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.reference-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.presentation-grid h2,
+.moodboard-text h2{
+
+font-size:2rem;
+
+}
+
+}
+/*==================================================
+                    REVIT
+==================================================*/
+
+.revit{
+
+    width:min(1300px,92%);
+    margin:auto;
+
+}
+
+.two-columns{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.revit-image{
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    box-shadow:0 30px 70px rgba(0,0,0,.12);
+
+}
+
+.revit-image img{
+
+    width:100%;
+
+    transition:.6s;
+
+}
+
+.revit-image:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.section-subtitle{
+
+    display:block;
+
+    color:#888;
+
+    text-transform:uppercase;
+
+    letter-spacing:5px;
+
+    font-size:.8rem;
+
+    margin-bottom:20px;
+
+}
+
+.revit-text h2{
+
+    font-size:2.6rem;
+
+    margin-bottom:25px;
+
+    color:#111;
+
+}
+
+.revit-text p{
+
+    color:#666;
+
+    line-height:2;
+
+    margin-bottom:25px;
+
+}
+
+
+/*==================================================
+                WORKFLOW
+==================================================*/
+
+.workflow{
+
+    width:min(1350px,94%);
+    margin:auto;
+
+}
+
+.workflow-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:35px;
+
+    margin-top:70px;
+
+}
+
+.workflow-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+.workflow-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 35px 70px rgba(0,0,0,.12);
+
+}
+
+.workflow-card h2{
+
+    font-size:3.5rem;
+
+    color:#d2b48c;
+
+    margin-bottom:20px;
+
+    font-weight:600;
+
+}
+
+.workflow-card h3{
+
+    font-size:1.5rem;
+
+    margin-bottom:18px;
+
+    color:#111;
+
+}
+
+.workflow-card p{
+
+    color:#666;
+
+    line-height:1.9;
+
+}
+
+
+/*==================================================
+                GALERIE REVIT
+==================================================*/
+
+.gallery{
+
+    width:min(1400px,95%);
+    margin:auto;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    transition:.5s;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.10);
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:1100px){
+
+.two-columns{
+
+grid-template-columns:1fr;
+
+}
+
+.workflow-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.gallery-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.workflow-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.gallery-grid img{
+
+height:280px;
+
+}
+
+.revit-text h2{
+
+font-size:2rem;
+
+}
+
+}
+/*==================================================
+            SIMULATION SOLAIRE
+==================================================*/
+
+.sun{
+
+    width:min(1300px,92%);
+    margin:auto;
+
+}
+
+.sun .two-columns{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.sun img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+    transition:.5s;
+
+}
+
+.sun img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.sun h2{
+
+    font-size:2.4rem;
+
+    margin-bottom:25px;
+
+    color:#111;
+
+}
+
+.sun p{
+
+    color:#666;
+
+    line-height:2;
+
+    margin-bottom:25px;
+
+}
+
+
+/*==================================================
+                    ANALYSIS
+==================================================*/
+
+.analysis{
+
+    width:min(1300px,92%);
+    margin:auto;
+
+}
+
+/* les cartes utilisent déjà .cards et .card */
+
+.analysis .card{
+
+    text-align:center;
+
+}
+
+.analysis .card h3{
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+}
+
+
+/*==================================================
+                    MATLAB
+==================================================*/
+
+.matlab{
+
+    width:min(1300px,92%);
+    margin:auto;
+
+}
+
+.matlab .two-columns{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.matlab img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+    transition:.5s;
+
+}
+
+.matlab img:hover{
+
+    transform:scale(1.04);
+
+}
+
+.matlab h2{
+
+    font-size:2.5rem;
+
+    margin-bottom:25px;
+
+}
+
+.matlab p{
+
+    color:#666;
+
+    line-height:2;
+
+    margin-bottom:30px;
+
+}
+
+.matlab ul{
+
+    list-style:none;
+
+}
+
+.matlab li{
+
+    position:relative;
+
+    padding-left:30px;
+
+    margin-bottom:18px;
+
+    color:#555;
+
+}
+
+.matlab li::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:#111;
+
+    left:0;
+    top:12px;
+
+}
+
+
+/*==================================================
+                RESULTATS
+==================================================*/
+
+.results{
+
+    width:min(1300px,92%);
+    margin:auto;
+
+}
+
+.results-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+    margin-top:70px;
+
+}
+
+.results-grid div{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:45px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.results-grid div:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 35px 70px rgba(0,0,0,.12);
+
+}
+
+.results-grid h2{
+
+    font-size:1.8rem;
+
+    margin-bottom:20px;
+
+    color:#111;
+
+}
+
+.results-grid p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:1000px){
+
+.sun .two-columns,
+.matlab .two-columns{
+
+grid-template-columns:1fr;
+
+}
+
+.results-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/*==================================================
+                    GALERIE
+==================================================*/
+
+.gallery{
+
+    width:min(1400px,95%);
+    margin:auto;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.gallery-item{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.10);
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:380px;
+
+    object-fit:cover;
+
+    transition:.6s;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.gallery-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.gallery-item:hover .gallery-overlay{
+
+    opacity:1;
+
+}
+
+.gallery-overlay h3{
+
+    color:white;
+
+    font-size:2rem;
+
+    font-weight:500;
+
+}
+
+
+/*==================================================
+                CONCLUSION
+==================================================*/
+
+.conclusion{
+
+    width:min(1100px,90%);
+    margin:auto;
+
+}
+
+.conclusion-box{
+
+    background:white;
+
+    padding:70px;
+
+    border-radius:25px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.08);
+
+}
+
+.conclusion-box h2{
+
+    font-size:2.4rem;
+
+    margin-bottom:30px;
+
+    color:#111;
+
+}
+
+.conclusion-box p{
+
+    color:#666;
+
+    line-height:2;
+
+    margin-bottom:25px;
+
+}
+
+
+/*==================================================
+                PROCHAINES ETAPES
+==================================================*/
+
+.next{
+
+    width:min(1300px,92%);
+    margin:auto;
+
+}
+
+.next .cards{
+
+    margin-top:60px;
+
+}
+
+.next .card{
+
+    text-align:center;
+
+}
+
+.next .card h3{
+
+    font-size:3rem;
+
+    color:#d2b48c;
+
+    margin-bottom:20px;
+
+}
+
+.next .card p{
+
+    color:#666;
+
+}
+
+
+/*==================================================
+                    FOOTER
+==================================================*/
+
+footer{
+
+    margin-top:120px;
+
+    background:#111;
+
+    padding:70px 0;
+
+}
+
+footer ul{
+
+    width:min(1200px,90%);
+    margin:auto;
+
+    list-style:none;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+}
+
+footer li{
+
+    color:white;
+
+    font-size:.95rem;
+
+    opacity:.9;
+
+}
+
+
+/*==================================================
+                SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#efefef;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#b8b8b8;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#8a8a8a;
+
+}
+
+
+/*==================================================
+                RESPONSIVE FINAL
+==================================================*/
+
+@media(max-width:1100px){
+
+.gallery-grid{
+
+grid-template-columns:1fr;
+
+}
+
+footer ul{
+
+justify-content:center;
+
+gap:25px;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.conclusion-box{
+
+padding:40px;
+
+}
+
+.conclusion-box h2{
+
+font-size:2rem;
+
+}
+
+.gallery-item img{
+
+height:260px;
+
+}
+
+footer{
+
+padding:50px 0;
+
+}
+
+footer ul{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+}
+

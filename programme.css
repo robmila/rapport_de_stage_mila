@@ -1,0 +1,798 @@
+/* ==================================================
+                    RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #faf9f7;
+    color: #222;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ==================================================
+                    NAVBAR
+================================================== */
+
+nav {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 45px;
+
+    padding: 28px 0;
+
+    background: rgba(255,255,255,.85);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    z-index: 999;
+
+    transition: .4s;
+
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+nav a {
+    color: #222;
+
+    font-size: .95rem;
+
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    transition: .3s;
+
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #222;
+
+    transition: .3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+
+/* ==================================================
+                    HERO
+================================================== */
+
+.hero {
+    position: relative;
+
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 0 10%;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.30),
+            rgba(0,0,0,.60)
+        ),
+        url("image/i.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+
+/* petit titre */
+
+.small-title {
+    letter-spacing: 8px;
+
+    text-transform: uppercase;
+
+    font-size: .85rem;
+
+    margin-bottom: 25px;
+
+    opacity: .9;
+}
+
+
+/* grand titre */
+
+.hero h1 {
+    font-size: 5.2rem;
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    margin-bottom: 30px;
+
+    max-width: 950px;
+}
+
+
+/* texte */
+
+.hero p {
+    max-width: 850px;
+
+    color: rgba(255,255,255,.92);
+
+    font-size: 1.15rem;
+
+    line-height: 2;
+}
+
+
+/* ==================================================
+                    ANIMATIONS
+================================================== */
+
+.hero > * {
+    animation: fadeUp .9s ease;
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==================================================
+                    PYTHON
+================================================== */
+
+.python-section {
+    width: min(1300px, 90%);
+
+    margin: auto;
+
+    padding: 140px 0;
+}
+
+
+/* numéro */
+
+.section-number {
+    display: block;
+
+    color: #888;
+
+    text-transform: uppercase;
+
+    letter-spacing: 5px;
+
+    font-size: .8rem;
+
+    margin-bottom: 20px;
+}
+
+
+/* titre */
+
+.python-section > h2 {
+    font-size: 3.2rem;
+
+    font-weight: 600;
+
+    color: #111;
+
+    margin-bottom: 20px;
+}
+
+
+/* introduction */
+
+.section-intro {
+    max-width: 800px;
+
+    color: #666;
+
+    font-size: 1.05rem;
+
+    line-height: 2;
+
+    margin-bottom: 80px;
+}
+
+
+/* ==================================================
+                CARTES PYTHON
+================================================== */
+
+.python-card {
+    display: grid;
+
+    grid-template-columns: 1.1fr .9fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+    margin-bottom: 120px;
+}
+
+
+/* une carte sur deux inversée */
+
+.python-card.reverse {
+    grid-template-columns: .9fr 1.1fr;
+}
+
+
+/* image */
+
+.python-image {
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.12);
+}
+
+.python-image img {
+    width: 100%;
+
+    transition: .6s;
+}
+
+.python-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* ==================================================
+                    TEXTE PYTHON
+================================================== */
+
+.python-text {
+    padding: 20px;
+}
+
+.python-text span {
+    display: block;
+
+    color: #888;
+
+    text-transform: uppercase;
+
+    letter-spacing: 5px;
+
+    font-size: .8rem;
+
+    margin-bottom: 20px;
+}
+
+.python-text h3 {
+    font-size: 2.5rem;
+
+    font-weight: 500;
+
+    margin-bottom: 25px;
+
+    color: #111;
+}
+
+.python-text p {
+    color: #666;
+
+    line-height: 2;
+
+    margin-bottom: 25px;
+
+    max-width: 550px;
+}
+
+
+/* ==================================================
+                ANIMATION PYTHON
+================================================== */
+
+.python-card {
+    animation: fadeUp .9s ease;
+}
+
+
+/* ==================================================
+                    RESPONSIVE
+================================================== */
+
+@media (max-width: 1050px) {
+
+    .hero h1 {
+        font-size: 3.8rem;
+    }
+
+    .python-card,
+    .python-card.reverse {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-wrap: wrap;
+
+        gap: 15px;
+
+        padding: 18px;
+    }
+
+    nav a {
+        font-size: .9rem;
+    }
+
+    .hero {
+        padding: 0 8%;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .python-section {
+        padding: 90px 0;
+    }
+
+    .python-section > h2 {
+        font-size: 2rem;
+    }
+
+    .python-text h3 {
+        font-size: 2rem;
+    }
+
+}
+/* ==================================================
+                    REVIT
+================================================== */
+
+.tools-section {
+    width: 100%;
+
+    padding: 140px 0;
+
+    background: #f3f1ed;
+}
+
+.tools-section > .section-number,
+.tools-section > h2 {
+    width: min(1300px, 90%);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tools-section > h2 {
+    font-size: 3.2rem;
+
+    font-weight: 600;
+
+    color: #111;
+
+    margin-bottom: 70px;
+}
+
+
+/* carte Revit */
+
+.tool-card {
+    width: min(1250px, 90%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+    background: white;
+
+    padding: 60px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.07);
+
+    transition: .35s;
+}
+
+.tool-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.11);
+}
+
+
+.tool-card h3 {
+    font-size: 2rem;
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+
+    color: #111;
+}
+
+.tool-card p {
+    color: #666;
+
+    line-height: 2;
+
+    max-width: 500px;
+}
+
+
+/* liste */
+
+.tool-list {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0;
+
+    border-top: 1px solid #ddd;
+}
+
+.tool-list span {
+    padding: 18px 5px;
+
+    border-bottom: 1px solid #ddd;
+
+    color: #555;
+
+    font-size: .9rem;
+}
+
+
+/* ==================================================
+                AUTRES OUTILS
+================================================== */
+
+.other-tools {
+    width: min(1300px, 92%);
+
+    margin: auto;
+
+    padding: 140px 0;
+}
+
+.other-tools h2 {
+    font-size: 3.2rem;
+
+    font-weight: 600;
+
+    color: #111;
+
+    margin-bottom: 70px;
+}
+
+
+/* grille */
+
+.tools-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+/* cartes */
+
+.small-tool {
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.06);
+
+    transition: .35s;
+}
+
+.small-tool:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.12);
+}
+
+.small-tool h3 {
+    font-size: 1.6rem;
+
+    margin-bottom: 20px;
+
+    color: #111;
+}
+
+.small-tool p {
+    color: #666;
+
+    line-height: 1.9;
+}
+
+
+/* ==================================================
+                    WORKFLOW
+================================================== */
+
+.synthese {
+    width: 100%;
+
+    padding: 140px 0;
+
+    background: #f3f2f0;
+}
+
+.synthese > .section-number,
+.synthese > h2 {
+    width: min(1300px, 92%);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.synthese h2 {
+    font-size: 3.2rem;
+
+    font-weight: 600;
+
+    color: #111;
+
+    margin-bottom: 70px;
+}
+
+
+/* grille workflow */
+
+.workflow {
+    width: min(1350px, 94%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 35px;
+}
+
+
+/* cartes */
+
+.workflow > div {
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 45px;
+
+    text-align: center;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.06);
+
+    transition: .35s;
+}
+
+.workflow > div:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 35px 70px rgba(0,0,0,.12);
+}
+
+
+/* gros numéro / nom */
+
+.workflow strong {
+    display: block;
+
+    font-size: 2rem;
+
+    color: #d2b48c;
+
+    margin-bottom: 20px;
+
+    font-weight: 600;
+}
+
+.workflow p {
+    color: #666;
+
+    line-height: 1.9;
+}
+
+
+/* ==================================================
+                    FOOTER
+================================================== */
+
+footer {
+    margin-top: 120px;
+
+    background: #111;
+
+    padding: 70px 0;
+
+    color: white;
+}
+
+footer p {
+    width: min(1200px, 90%);
+
+    margin: auto;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: .95rem;
+
+    opacity: .9;
+}
+
+
+/* ==================================================
+                    SCROLLBAR
+================================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #efefef;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b8b8b8;
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8a8a8a;
+}
+
+
+/* ==================================================
+                    RESPONSIVE
+================================================== */
+
+@media (max-width: 1050px) {
+
+    .tool-card {
+        grid-template-columns: 1fr;
+
+        padding: 45px;
+    }
+
+    .workflow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .tools-section {
+        padding: 90px 0;
+    }
+
+    .other-tools {
+        padding: 90px 0;
+    }
+
+    .synthese {
+        padding: 90px 0;
+    }
+
+    .tools-section > h2,
+    .other-tools h2,
+    .synthese h2 {
+        font-size: 2rem;
+    }
+
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .workflow {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-card {
+        padding: 35px;
+    }
+
+}

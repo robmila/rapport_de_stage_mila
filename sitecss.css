@@ -1,0 +1,1132 @@
+/* =====================================================
+   ABOUT.CSS
+   PAGE ARQUITECTONICA EUROPE
+===================================================== */
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f5f5f5;
+    color: #171717;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 85px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 55px;
+
+    background: rgba(255,255,255,0.88);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    z-index: 1000;
+
+    box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+
+    transition: 0.35s ease;
+}
+
+
+nav a {
+
+    position: relative;
+
+    text-decoration: none;
+
+    color: #222;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    font-weight: 500;
+
+    transition: 0.35s ease;
+}
+
+
+nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #9d8b66;
+
+    transition: 0.35s ease;
+}
+
+
+nav a:hover {
+
+    color: #9d8b66;
+
+    transform: translateY(-2px);
+}
+
+
+nav a:hover::after {
+
+    width: 100%;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    margin: 25px 30px 0;
+
+    border-radius: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 120px 40px;
+
+    color: #171717;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.08);
+
+    animation: heroAppear 1s ease forwards;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* légère forme décorative */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: #f1f1f1;
+
+    top: -250px;
+    right: -150px;
+
+    z-index: 0;
+}
+
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: #f7f7f7;
+
+    bottom: -150px;
+    left: -100px;
+
+    z-index: 0;
+}
+
+
+.hero > * {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.small-title {
+
+    font-size: 11px;
+
+    letter-spacing: 6px;
+
+    font-weight: 600;
+
+    margin-bottom: 30px;
+
+    color: #777;
+
+    animation: fadeUp 0.8s ease 0.2s both;
+}
+
+
+.hero h1 {
+
+    font-size: clamp(52px, 7vw, 100px);
+
+    line-height: 1.05;
+
+    font-weight: 600;
+
+    margin-bottom: 35px;
+
+    letter-spacing: -3px;
+
+    animation: fadeUp 0.8s ease 0.35s both;
+}
+
+
+.hero p {
+
+    max-width: 650px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    font-weight: 300;
+
+    color: #666;
+
+    animation: fadeUp 0.8s ease 0.5s both;
+}
+
+
+/* =========================
+   BOUTON HERO
+========================= */
+
+.hero-button {
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 55px;
+
+    min-width: 190px;
+
+    padding: 18px 40px;
+
+    border-radius: 50px;
+
+    background: #171717;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+
+    animation: fadeUp 0.8s ease 0.65s both;
+}
+
+
+.hero-button:hover {
+
+    transform: translateY(-6px);
+
+    background: #9d8b66;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.about-section,
+.group-section,
+.function-section,
+.environment-section,
+.missions-section {
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 150px 50px;
+}
+
+
+.section-number {
+
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #888;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+
+.about-title h2 {
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+}
+
+
+.about-text {
+
+    padding-top: 10px;
+}
+
+
+.about-text p {
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    color: #5e5e5e;
+
+    margin-bottom: 25px;
+}
+
+
+.about-text strong {
+
+    color: #171717;
+
+    font-weight: 600;
+}
+
+
+.about-text a {
+
+    color: #171717;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #999;
+
+    transition: 0.3s ease;
+}
+
+
+.about-text a:hover {
+
+    color: #9d8b66;
+
+    border-color: #9d8b66;
+}
+
+
+/* =========================
+   GROUPE
+========================= */
+
+.group-section {
+
+    max-width: none;
+
+    background: #eeeeee;
+
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+
+.group-section > h2 {
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    margin-bottom: 70px;
+
+    letter-spacing: -2px;
+}
+
+
+.group-grid {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.group-card {
+
+    min-height: 330px;
+
+    padding: 45px;
+
+    background: #ffffff;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        background 0.45s ease;
+
+    animation: fadeUp 0.8s ease both;
+}
+
+
+.group-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 25px 55px rgba(0,0,0,0.10);
+
+    background: #faf9f7;
+}
+
+
+.group-card > span {
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #999;
+}
+
+
+.group-card h3 {
+
+    font-size: 32px;
+
+    font-weight: 500;
+
+    margin-top: 35px;
+
+    margin-bottom: 15px;
+
+    transition: 0.35s ease;
+}
+
+
+.group-card:hover h3 {
+
+    color: #9d8b66;
+}
+
+
+.group-card p {
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #666;
+
+    max-width: 450px;
+}
+
+
+.group-card small {
+
+    margin-top: 35px;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #777;
+
+    transition: 0.35s ease;
+}
+
+
+.group-card:hover small {
+
+    color: #9d8b66;
+
+    letter-spacing: 4px;
+}
+
+
+/* =========================
+   FONCTIONNEMENT
+========================= */
+
+.function-section {
+
+    max-width: none;
+
+    background: #ffffff;
+
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+
+.function-grid {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 120px;
+}
+
+
+.function-grid h2 {
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+}
+
+
+.function-grid > div:last-child {
+
+    padding-top: 10px;
+}
+
+
+.function-grid p {
+
+    max-width: 600px;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   ENVIRONNEMENT
+========================= */
+
+.environment-section {
+
+    max-width: none;
+
+    background: #f1efeb;
+
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+
+.environment-section > h2 {
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 70px;
+}
+
+
+.environment-content {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+.environment-image {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background: #ddd;
+
+}
+
+
+.environment-image img {
+
+    width: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.7s ease;
+}
+
+
+.environment-image:hover img {
+
+    transform: scale(1.04);
+}
+
+
+.environment-text > p {
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    color: #666;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================
+   LISTE INFORMATIONS
+========================= */
+
+.info-list {
+
+    border-top: 1px solid #d2d0cc;
+}
+
+
+.info-list > div {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #d2d0cc;
+
+    transition: padding 0.35s ease;
+}
+
+
+.info-list > div:hover {
+
+    padding-left: 10px;
+}
+
+
+.info-list strong {
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+
+.info-list span {
+
+    font-size: 12px;
+
+    color: #777;
+
+    text-align: right;
+}
+/* =========================
+   MISSIONS
+========================= */
+
+.missions-section {
+
+    max-width: none;
+
+    background: #ffffff;
+
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+
+.missions-section > h2 {
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 70px;
+}
+
+
+.missions-grid {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 1px;
+
+    background: #d5d5d5;
+}
+
+
+.missions-grid > div {
+
+    min-height: 260px;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition:
+        background 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+.missions-grid > div:hover {
+
+    background: #f4f2ee;
+
+    transform: translateY(-5px);
+}
+
+
+.missions-grid span {
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #999;
+}
+
+
+.missions-grid h3 {
+
+    font-size: 24px;
+
+    font-weight: 500;
+
+    margin-top: 40px;
+}
+
+
+.missions-grid p {
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: #777;
+
+    margin-top: 20px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #171717;
+
+    color: white;
+
+    padding: 45px 8%;
+
+    text-align: center;
+}
+
+
+footer p {
+
+    font-size: 12px;
+
+    color: #cccccc;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes heroAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    nav {
+
+        gap: 25px;
+    }
+
+
+    .about-grid,
+    .function-grid,
+    .environment-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    .group-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .missions-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .environment-image {
+
+        max-height: 500px;
+    }
+
+}
+
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media (max-width: 700px) {
+
+    nav {
+
+        height: auto;
+
+        min-height: 70px;
+
+        padding: 18px 20px;
+
+        gap: 15px 22px;
+
+        flex-wrap: wrap;
+    }
+
+
+    nav a {
+
+        font-size: 11px;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    .hero {
+
+        margin: 15px;
+
+        border-radius: 25px;
+
+        min-height: calc(100vh - 30px);
+
+        padding: 100px 25px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .hero p {
+
+        font-size: 15px;
+    }
+
+
+    .about-section,
+    .group-section,
+    .function-section,
+    .environment-section,
+    .missions-section {
+
+        padding-top: 100px;
+
+        padding-bottom: 100px;
+
+        padding-left: 25px;
+
+        padding-right: 25px;
+    }
+
+
+    .about-title h2,
+    .function-grid h2,
+    .group-section > h2,
+    .environment-section > h2,
+    .missions-section > h2 {
+
+        font-size: 42px;
+    }
+
+
+    .group-card {
+
+        min-height: 300px;
+
+        padding: 35px;
+    }
+
+
+    .missions-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    nav {
+
+        gap: 12px 16px;
+    }
+
+
+    nav a {
+
+        font-size: 10px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 40px;
+    }
+
+
+    .small-title {
+
+        font-size: 9px;
+
+        letter-spacing: 4px;
+    }
+
+
+    .hero p {
+
+        font-size: 14px;
+    }
+
+
+    .hero-button {
+
+        margin-top: 40px;
+
+        padding: 16px 35px;
+    }
+
+
+    .about-text p,
+    .function-grid p,
+    .environment-text > p {
+
+        font-size: 14px;
+    }
+
+
+    .group-card h3 {
+
+        font-size: 27px;
+    }
+
+
+    .info-list > div {
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+
+    .info-list span {
+
+        text-align: left;
+    }
+
+}
